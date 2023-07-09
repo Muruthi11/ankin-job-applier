@@ -44,7 +44,7 @@ def getApplication(request, pk):
         serializer = applicationSerializer(application, many=False)
         return Response(serializer.data)
     except Application.DoesNotExist:
-        raise Http404('This application does not exist!')
+        raise Http404("This application doesn't exist!")
 
 @api_view(['POST'])
 def loginAPI(request):
